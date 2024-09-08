@@ -26,8 +26,6 @@ export enum ApplicationModal {
   ADDRESS_CLAIM,
   CLAIM_POPUP,
   MENU,
-  DELEGATE,
-  VOTE,
   NETWORK_SELECTOR,
 }
 

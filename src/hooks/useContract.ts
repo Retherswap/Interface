@@ -1,11 +1,8 @@
 import { Contract } from '@ethersproject/contracts';
-import { abi as GOVERNANCE_ABI } from '@retherswap/governance/build/GovernorAlpha.json';
-import { abi as RETHER_ABI } from '@retherswap/governance/build/Rether.json';
 import { abi as STAKING_REWARDS_ABI } from '@retherswap/liquidity-staker/build/StakingRewards.json';
 import { ChainId, WETH } from '@retherswap/sdk';
 import { abi as IRetherswapPairABI } from '@retherswap/core/build/IRetherswapPair.json';
 import { useMemo } from 'react';
-import { GOVERNANCE_ADDRESS, RETHER } from '../constants';
 import ENS_PUBLIC_RESOLVER_ABI from '../constants/abis/ens-public-resolver.json';
 import ENS_ABI from '../constants/abis/ens-registrar.json';
 import { ERC20_BYTES32_ABI } from '../constants/abis/erc20';
@@ -66,15 +63,6 @@ export function usePairContract(pairAddress?: string, withSignerIfPossible?: boo
 export function useMulticallContract(): Contract | null {
   const { chainId } = useActiveWeb3React();
   return useContract(chainId && MULTICALL_NETWORKS[chainId], MULTICALL_ABI, false);
-}
-
-export function useGovernanceContract(): Contract | null {
-  return useContract(GOVERNANCE_ADDRESS, GOVERNANCE_ABI, true);
-}
-
-export function useRethersContract(): Contract | null {
-  const { chainId } = useActiveWeb3React();
-  return useContract(chainId ? RETHER[chainId].address : undefined, RETHER_ABI, true);
 }
 
 export function useStakingContract(stakingAddress?: string, withSignerIfPossible?: boolean): Contract | null {

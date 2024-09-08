@@ -111,12 +111,12 @@ export default function MainSection() {
       <MainSectionContainer>
         <Column style={{ gap: '1.2em', maxWidth: '500px' }}>
           <MainSectionTitle>
-            Hypra's<br></br>
+            Vecno's<br></br>
             <TitleRow style={{ gap: '10px' }}>
               <Fonts.blue2 fontWeight={800}>Main</Fonts.blue2> DEX
             </TitleRow>
           </MainSectionTitle>
-          <MainSectionSubTitle>Trade, Swap, Farm, Stake and more inside HYPRA's ecosystem</MainSectionSubTitle>
+          <MainSectionSubTitle>Trade, Swap, Farm, Stake and more inside the ecosystem</MainSectionSubTitle>
           <Row style={{ gap: '10px', marginTop: '8px' }}>
             <NavLink to="/swap" style={{ width: '100%', textDecoration: 'none' }}>
               <ButtonPrimary style={{ fontWeight: 800, fontSize: '14px' }}>Trade now</ButtonPrimary>

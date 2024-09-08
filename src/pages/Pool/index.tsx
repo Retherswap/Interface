@@ -136,11 +136,21 @@ export default function Pool() {
             ) : (
               <EmptyProposals>
                 <Fonts.body color={theme.text3} textAlign="center">
-                  No Liquidity found
+                  No Liquidity
                 </Fonts.body>
               </EmptyProposals>
             )}
           </AutoColumn>
+          <Fonts.body color={theme.text3} textAlign="center">
+            Is a liquidity pool missing? Import {" "}
+            <a
+              href="/#/find"
+              style={{ color: theme.text3 }} // Optional: style the link
+              target="_blank"
+            >
+              here
+            </a>.
+          </Fonts.body>
         </AutoColumn>
       </PageWrapper>
     </AppBody>

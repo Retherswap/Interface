@@ -215,7 +215,6 @@ export default function Header() {
               { title: 'Balance', link: '/balance' },
               { title: 'Tokens', link: '/tokens' },
               { title: '🚧Bridge' },
-              { title: '🚧USDR Vault' },
             ]}
           ></HeaderNavigationMenu>
           <HeaderNavigationMenu
@@ -227,7 +226,14 @@ export default function Header() {
               { title: '🚧USDR Yield' },
             ]}
           ></HeaderNavigationMenu>
-          <HeaderNavigationMenu title={'Vote'} defaultLink={'/vote'}></HeaderNavigationMenu>
+          <HeaderNavigationMenu
+            title={'Mint'}
+            defaultLink={''}
+            content={[
+              { title: '🚧USDR Vault' },
+              { title: '🚧Faucet' },
+            ]}
+          ></HeaderNavigationMenu>
           <HeaderNavigationMenu title={'Others'} content={otherLinks}></HeaderNavigationMenu>
         </HeaderLinks>
       </Row>

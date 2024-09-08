@@ -16,14 +16,12 @@ import {
 import Earn from './Earn';
 import Manage from './Earn/Manage';
 import Pool from './Pool';
-import Vote from './Vote';
-import VotePage from './Vote/VotePage';
 import PoolFinder from './PoolFinder';
 import RemoveLiquidity from './RemoveLiquidity';
 // import URLWarning from '../components/Header/URLWarning';
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects';
 import Swap from './Swap';
-import { OpenClaimAddressModalAndRedirectToSwap, RedirectPathToHomeOnly, RedirectToSwap } from './Swap/redirects';
+import { RedirectPathToHomeOnly, RedirectToSwap } from './Swap/redirects';
 import Bridge from './Bridge';
 import USDRVault from './USDRVault';
 import TokenList from './Tokenlist/token-list';
@@ -114,12 +112,11 @@ export default function App() {
                       </AdminRouteGuard>
                     </Route>
                     <Route exact strict path="/home" component={Home} />
-                    <Route exact strict path="/claim" component={OpenClaimAddressModalAndRedirectToSwap} />
                     <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                     <Route exact strict path="/find" component={PoolFinder} />
                     <Route exact strict path="/pool" component={Pool} />
                     <Route exact strict path="/bridge" component={Bridge} />
-                    <Route exact strict path="/usdr" component={USDRVault} />
+                    <Route exact strict path="/vault" component={USDRVault} />
                     <Route exact strict path="/tokens" component={TokenList} />
                     <Route exact strict path="/token/:address" component={TokenInfos} />
                     <Route exact strict path="/balance" component={AccountBalance} />
@@ -132,7 +129,6 @@ export default function App() {
                       component={TokenBalanceTransactionList}
                     />
                     <Route exact strict path="/farm" component={Earn} />
-                    <Route exact strict path="/vote" component={Vote} />
                     <Route exact strict path="/create" component={RedirectToAddLiquidity} />
                     <Route exact path="/add" component={AddLiquidity} />
                     <Route exact path="/add/:currencyIdA" component={RedirectOldAddLiquidityPathStructure} />
@@ -143,7 +139,6 @@ export default function App() {
                     <Route exact strict path="/remove/:tokens" component={RedirectOldRemoveLiquidityPathStructure} />
                     <Route exact strict path="/remove/:currencyIdA/:currencyIdB" component={RemoveLiquidity} />
                     <Route exact strict path="/farm/:currencyIdA/:currencyIdB" component={Manage} />
-                    <Route exact strict path="/vote/:id" component={VotePage} />
                     <Route component={RedirectPathToHomeOnly} />
                   </Switch>
                 </Web3ReactManager>

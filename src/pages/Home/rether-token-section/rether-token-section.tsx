@@ -91,7 +91,7 @@ export default function RetherTokenSection() {
           Explore the ecosystem with <span style={{ color: theme.blue2 }}>RETHER</span>
         </Title>
         <Subtitle>
-          Rether is the native token of Retherswap and its ecosystem, it is used for governance, staking and way more.
+          Rether is the native token of Retherswap and its ecosystem, it is used for staking and more.
         </Subtitle>
         <Row style={{ gap: '10px', marginTop: '8px', justifyContent: 'center' }}>
           <NavLink
